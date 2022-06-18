@@ -1,0 +1,163 @@
+Test Design :
+--------------
+
+Test Scenarios:
+-----------
+- Test scenario 1 : Check the Search Functionality
+- Test scenario 2 : Check the New Transfer Functionality
+- Test scenario 3 : Check Edit category Functionality
+- Test scenario 4 : Check delete category Functionality
+- Test scenario 5 : Check merge category Functionality
+- Test scenario 6 : Check enable category Functionality
+- Test scenario 7 : Check add expenses Functionality
+- Test scenario 8 : Check the filtering Functionality according to cash or using payment card
+- Test scenario 9 : Check if we enter a negative value while adding new income
+- Test scenario 10 : Check if we enter value zero while adding new income ,it shouldn't add it
+
+Test Cases :
+------------
+-Test case for Scenario 1 :
+        1)Check system behavior when the search input entered is valid.
+        2)Check system behavior when the search input entered is invalid like for example
+          having a number not a string input , the system should display to the user that he shouldn't enter
+          a number in the search input.
+        3)Check system behavior when the search input is empty and the user clicked on the search button
+        , so the system should inform the user that he shouldn't leave it empty.
+-Test case for Scenario 7 :
+         1)Check system behavior when the input value entered is valid and the payment type is set by default to cash
+         , then the system should work fine without crashing.
+         2)Check system behavior when the input value entered is valid and the payment type is set to payment card so
+           the system should work fine also.
+         3)Check system behavior when the input value entered is invalid like for example
+           having a negative number input and without choosing the payment type so by default it should be set to cash type
+           ,so the system should display to the user that he shouldn't enter a negative value , and also the system should not proceed to any step
+           till the user adjust it to the correct value input type then it can proceed to the next step after that  which is choosing category.
+         4)Check system behavior when the  input is empty and the user clicked on the choose category button
+          and without choosing the payment type so by default it should be set to cash type
+         ,so the system should display to the user that he should enter a value , and also the system should not proceed to any step
+         till the user adjust it by entering value input type ,then it can proceed to the next step after that which is choosing category.
+-Test case for Scenario 2 :
+        1)Check system behavior when the input value entered is valid , then the system should work fine.
+        2)Check system behavior when the input value entered is invalid like for example
+          having a negative number input , the system should display to the user that he shouldn't enter
+          a negative value.
+        3)Check system behavior when the  input is empty and the user clicked on the add transfer button
+        , so the system should inform the user that he shouldn't leave it empty.
+-Test case for Scenario 3 :
+        1)Check system behavior when the input value entered is valid , then the system should work fine and save changes.
+        2)Check system behavior when the  input is empty and the user clicked on the back button
+        , so the system shouldn't save it and nothing should be changed in the category name.
+-Test case for Scenario 4 :
+        1)Check system behavior when the basket button is clicked this category should not be in the category list
+        and its icon should be removed also ,and everything related to it should be removed also.
+-Test case for Scenario 5 :
+        1)Check system behavior when the user clicked on merge between two categories this category should be merged with the other category
+         in the category list and its icon should be removed also.
+-Test case for Scenario 6 :
+        1)Check system behavior when the enable check box is checked, then the system should work fine and the category should be displayed
+        in the category list an activated also .
+        2)Check system behavior when the enable check box is not checked, then the system should display this category but not activated
+        and cannot be clickable ,but in the category list.
+-Test case for Scenario 8 :
+        1)Check system behavior when the user select all accounts so all the payments types should be displayed and not only one type payment.
+        2)Check system behavior when the user select cash so cash payment type should be displayed  only one type payment.
+        3)Check system behavior when the user select payment card so  payment type should be displayed  only the payments with the payment card type.
+-Test case for Scenario 9 :
+        1)Check system behavior when the input value entered for the income input is valid , then the system should work fine and the
+        new income should be added successfully.
+        1)Check system behavior when the input value entered for the income input is not valid like for example the value is negative number
+          , then the system should display a warning to notify the user that it should be positive number and also if the user clicke on  choose
+          category while he is entering wrong data type the system should not proceed till the user adjust it and entered a correct data type .
+        3)Check system behavior when the  input is empty and the user clicked on the choose category button
+         , so the system shouldn't proceed.
+-Test case for Scenario 10 :
+
+
+
+
+
+Bug Reporting Deliverables:
+---------------------------
+Bug 1:
+------
+Title:Add Transfer
+Reproducible Steps : when trying to add a transfer to accounts and entering an amount and setting the type of payment and press add transfer
+Attachments:
+Affected Devices :Desktop/Mobile/Tablet
+Network :
+Severity : Major
+Priority:High
+Impact:the transfer functiunality has an important feature in the app ,and i the transfer process is not added
+, this might lead to bad reviews and impact on the project
+
+Bug 2:
+------
+Title:Wrong Percentage Calculation
+Reproducible Steps : when there are many income and expenses the percentage displayed under each category is not correct
+Attachments:
+Affected Devices :Desktop/Mobile/Tablet
+Network :
+Severity : Major
+Priority:High
+Impact:It might lead to wrong calculations and impact on the whole project.
+
+Bug 3:
+------
+Title:Payment Type UI Bug
+Reproducible Steps : when the user click on the type of payment and the drop down menu opens it opens on the top of the drop down button
+and it will be much better if it appears under it
+Attachments:
+Affected Devices :Desktop/Mobile/Tablet
+Network :
+Severity : Minor
+Priority:Low
+Impact:It is not a user friendly .
+
+Bug 4:
+------
+Title:Carry Over
+Reproducible Steps : when the user view the balance and the is a carry over income the icon beside the amount is not relevant
+and it will be much better if it appears as the other icons a green dot
+Attachments:
+Affected Devices :Desktop/Mobile/Tablet
+Network :
+Severity : Minor
+Priority:Low
+Impact:It is not a user friendly .
+
+Bug 5:
+------
+Title:House in the search
+Reproducible Steps : when the user search for 'house' it displays the added transfer which it is not relevant to the keyword house
+and it will be much better if it appears as the other icons a green dot
+Attachments:
+Affected Devices :Desktop/Mobile/Tablet
+Network :
+Severity : Major
+Priority:High
+Impact:It is may lead to negative impact on the project or some conflicts .
+
+Bug 6:
+------
+Title:Category Items
+Reproducible Steps : when the user view the items that surrounds the pie chart and if one of the icons is not clear
+he should press on it inorder to know what this items stands for
+Attachments:
+Affected Devices :Desktop/Mobile/Tablet
+Network :
+Severity : Minor
+Priority:Low
+Impact:It is not a user friendly ,it will be better if each item has a label describing it , for a good user experience.
+
+Test Automation :
+-----------------
+
+Test Case 1:
+          1)Check system behavior when the search input entered is valid.
+Test Case 2:
+          1)Check system behavior when the search input entered is invalid like for example
+            having a number not a string input , the system should display to the user that he shouldn't enter
+            a number in the search input.
+Test Case 3:
+          1)Check system behavior when the search input is empty and the user clicked on the search button
+            , so the system should do nothig and the search should be disabled.
